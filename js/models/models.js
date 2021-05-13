@@ -1,9 +1,23 @@
 import { books } from '../data/books.js';
-// import { uniqid } from '../data.js';
+import { uniqid } from '../utils/uniqid.js';
 
 const Books = {
-    createBook(book){
-        console.log(book.id);
+    createBook(
+        {
+            title,
+            year,
+            read,
+        }
+    ){     
+       const newBook = {
+            id : uniqid(),
+            title,
+            year,
+            read,
+        }
+        books.push(newBook);
+        console.log(books)
+        return true;
     },
 }
 

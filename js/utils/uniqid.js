@@ -1,5 +1,5 @@
 const uniqid =  ()=>{
-    const id = Math.random().toString(17);
+    const id = Math.random().toString();
     return id.slice(2);
 }
 

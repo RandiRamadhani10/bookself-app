@@ -5,15 +5,17 @@ const Books = {
     createBook(
         {
             title,
+            author,
             year,
-            read,
+            isComplete,
         }
     ){     
        const newBook = {
             id : uniqid(),
             title,
+            author,
             year,
-            read,
+            isComplete,
         }
         books.push(newBook);
         console.log(books)

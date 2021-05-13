@@ -1,27 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style/style.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <form action=""id="form">
+    <div class="navbar">
+        <img src="" alt="">
+        <h4>Bookself-app</h4>
+    </div>
+
+    <form action="" id="form">
         <input type="text" id="title">
+        <br>
+        <input type="text" id="author">
         <br>
         <input type="text" id="year">
         <br>
-        <input type="checkbox" id="read">
+        <input type="checkbox" id="isComplete">
         <br>
         <button id="button">Submit</button>
     </form>
-
-    <div id="isComplete">
-       
+    <div class="result">
+        <div class="listComplete">
+            <h2>sudah dibaca</h2>
+            <div id="isCompleted" class="isCompleted">
+                <div class="listBook">
+                    <div class="dataBook">
+                        <h3>${data.title}</h3>
+                        <h4>${data.author}</h4>
+                        <p>${data.year}</p>
+                    </div>
+                    <div class="btn">
+                        <button id="notReaded">Belum Dibaca</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="listNotComplete">
+            <h2>belum dibaca</h2>
+            <div id="notCompleted">
+            </div>
+        </div>
     </div>
-    <br>
-    <div id="notComplete"></div>
+
     <script src="js/index.js" type="module"></script>
 </body>
+
 </html>

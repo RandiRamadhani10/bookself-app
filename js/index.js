@@ -1,5 +1,4 @@
 import { Books } from "./models/models.js";
-import { uniqid } from "./utils/uniqid.js";
 import { Rendering } from "./dom.js";
 
 
@@ -9,13 +8,15 @@ form.addEventListener("submit", (event)=>{
     event.preventDefault();
         const title = document.querySelector("#title");
         const year = document.querySelector("#year");
-        const read = document.querySelector("#read");
-
+        const author = document.querySelector("#author");
+        const isComplete = document.querySelector("#isComplete");
+        
         
         Books.createBook({
             title: title.value,
+            author: author.value,
             year: year.value,
-            read: read.checked,
+            isComplete: isComplete.checked,
         });
         Rendering.renderList();
 });

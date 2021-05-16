@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./style/style.css">
@@ -16,38 +15,30 @@
     </div>
 
     <form action="" id="form">
-        <input type="text" id="title">
+        <input type="text" id="title" maxlength="25">
         <br>
-        <input type="text" id="author">
+        <input type="text" id="author" maxlength="15">
         <br>
-        <input type="text" id="year">
+        <input type="number" id="year" maxlength="4">
         <br>
         <input type="checkbox" id="isComplete">
         <br>
         <button id="button">Submit</button>
     </form>
+    
     <div class="result">
-        <div class="listComplete">
-            <h2>sudah dibaca</h2>
-            <div id="isCompleted" class="isCompleted">
-                <div class="listBook">
-                    <div class="dataBook">
-                        <h3>${data.title}</h3>
-                        <h4>${data.author}</h4>
-                        <p>${data.year}</p>
-                    </div>
-                    <div class="btn">
-                        <button id="notReaded">Belum Dibaca</button>
-                    </div>
-                </div>
-            </div>
+        <h2>Sudah Dibaca</h2> 
+        
+        <div class="list">
+            <div id="isCompleted" class="list-child"></div>
         </div>
-        <br>
-        <div class="listNotComplete">
-            <h2>belum dibaca</h2>
-            <div id="notCompleted">
-            </div>
+        <hr>
+
+        <h2>Belum Dibaca</h2>
+        <div class="list">
+            <div id="notCompleted" class="list-child"></div>
         </div>
+        <hr>
     </div>
 
     <script src="js/index.js" type="module"></script>

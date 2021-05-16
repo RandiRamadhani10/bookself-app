@@ -10,7 +10,7 @@ const Books = {
             isComplete,
         }
     ){     
-       const newBook = {
+        const newBook = {
             id : uniqid(),
             title,
             author,
@@ -21,6 +21,21 @@ const Books = {
         console.log(books)
         return true;
     },
+    updateIsComplete(data){
+        const index = books.findIndex((book) => book.id === data );
+        console.log(books[index]);
+        if(books[0].isComplete){
+            books[index] = {
+                ...books[index],
+                isComplete: false,
+            }
+        }else{
+            books[index] = {
+                ...books[index],
+                isComplete: true,
+            }
+        } 
+    }
 }
 
 export{ Books };

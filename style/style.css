@@ -1,4 +1,6 @@
 body{
+    width: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: unset;
     padding: unset;
 }
@@ -21,46 +23,81 @@ body{
     align-items: center;
     width: 100%;
 }
-.listComplete{
+.result>h2{
+    color: darkgrey;
+    margin-top: 10px;
+    margin-bottom: 10px;
     width: 70%;
+}
+.result>hr{
+    width: 70%;
+    border: 1px solid gainsboro;
+    margin-bottom: 50px;
+}
+.list{
+    width: 100%;
     padding: 10px;
     display:flex;
     flex-direction: column; 
-    border: solid 0.5px black;
     justify-content: center;
     align-items: center;
 }
-.isCompleted{
-    width: 50%;
-    padding: 10px;
+.list-child{
+    width: 100%;
     margin-top: 5px;
     margin-bottom: 5px;
     display: flex;
-    flex-direction: column;
-
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
 }
 .listBook{
-    width: 100%;
-    padding: 5px;
+    /* margin-top: 10px; */
+    margin: 10px;
+    width: 150px;
+    height: 200px;
+    padding: 10px;
     border: solid 1px black;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    box-shadow: 3px 5px #00000036;
+
 }
-.dataBook>h3{
+.dataBook{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+}
+.dataBook>h2{
     margin-top: 5px;
     margin-bottom: 5px;
-    font-size: 20px;
+    font-size: 25px;
 }
 .dataBook>h4{
     font-style: unset;
     margin-top: 5px;
-    margin-bottom: 5px;
-    font-size: 12px;
+    margin-bottom: 0px;
+    font-size: 20px;
 }
 .dataBook>p{
-    margin-top: 5px;
+    margin-top: 0px;
     margin-bottom: 5px;
-    font-size: 11px;
+    font-size: 15px;
+}
+
+.btn{
+    color: white;
+    background-color: rgb(95, 148, 247);
+    border: transparent;
+    border-radius: 50px;
+    width: 120px;
+    height: 25px;
+}
+.btn:hover{
+    background-color: rgb(86, 135, 226);
 }

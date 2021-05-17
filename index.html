@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./style/style.css">
@@ -9,26 +10,37 @@
 </head>
 
 <body>
+    <form action="" id="form" class="form">
+        <div class="close">
+            <a class="iconClose">
+                <img src="asset/close.svg" alt="">
+            </a>
+        </div>
+        <label for="tittle"> Title</label>
+        <input type="text" id="title" maxlength="25">
+        <label for="author">author</label>
+        <input type="text" id="author" maxlength="15">
+        <label for="year">Year</label>
+        <input type="number" id="year" maxlength="4">
+        <div class="checklist">
+            <label for="isComplete">Sudah dibaca?</label>
+            <input type="checkbox" id="isComplete">
+        </div>
+        <button id="button">Submit</button>
+    </form>
+    <span class="back">
+    </span>
     <div class="navbar">
         <img src="" alt="">
         <h4>Bookself-app</h4>
     </div>
-
-    <form action="" id="form">
-        <input type="text" id="title" maxlength="25">
-        <br>
-        <input type="text" id="author" maxlength="15">
-        <br>
-        <input type="number" id="year" maxlength="4">
-        <br>
-        <input type="checkbox" id="isComplete">
-        <br>
-        <button id="button">Submit</button>
-    </form>
-    
+    <button class="iconAdd">
+        <img src="asset/add.svg" alt="">
+    </button>
+    <a data-idbook="${data.id}><img class=" icon" src="asset/close.svg" alt=""></a>
     <div class="result">
-        <h2>Sudah Dibaca</h2> 
-        
+        <h2>Sudah Dibaca</h2>
+
         <div class="list">
             <div id="isCompleted" class="list-child"></div>
         </div>

@@ -24,7 +24,7 @@ const Books = {
     updateIsComplete(data){
         const index = books.findIndex((book) => book.id === data );
         console.log(books[index]);
-        if(books[0].isComplete){
+        if(books[index].isComplete){
             books[index] = {
                 ...books[index],
                 isComplete: false,
@@ -35,6 +35,9 @@ const Books = {
                 isComplete: true,
             }
         } 
+    },
+    deleteBook(data){
+
     }
 }
 

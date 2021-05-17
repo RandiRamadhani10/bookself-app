@@ -5,37 +5,41 @@ const isCompleted = document.querySelector('#isCompleted');
 const notCompleted = document.querySelector('#notCompleted');
 
 const Rendering = {
-    renderList(){
-            let completedBooks = books.filter((book)=>{
-                return book.isComplete;      
-            });
-            
-            console.log(completedBooks);
-            let completeList = "";
-            isCompleted.innerHTML = completeList;
-            completedBooks.forEach(book => {
-                    completeList += Partials.booksRenderIsComplete(book);
-                    isCompleted.innerHTML = completeList;
-            });
-
-            let uncompletedBooks = books.filter((book)=>{
-                return !book.isComplete;    
-            });
-            console.log(uncompletedBooks);
-            let uncompleteList = "";
-            notCompleted.innerHTML = uncompleteList;
-            uncompletedBooks.forEach(book => {
-                uncompleteList += Partials.booksRenderNotComplete(book);
+    async renderList(){
+            const start = ()=>{
+                let completedBooks = books.filter((book)=>{
+                    return book.isComplete;      
+                });
+                
+                console.log(completedBooks);
+                let completeList = "";
+                isCompleted.innerHTML = completeList;
+                completedBooks.forEach(book => {
+                        completeList += Partials.booksRenderIsComplete(book);
+                        isCompleted.innerHTML = completeList;
+                });
+    
+                let uncompletedBooks = books.filter((book)=>{
+                    return !book.isComplete;    
+                });
+                console.log(uncompletedBooks);
+                let uncompleteList = "";
                 notCompleted.innerHTML = uncompleteList;
-            });
+                uncompletedBooks.forEach(book => {
+                    uncompleteList += Partials.booksRenderNotComplete(book);
+                    notCompleted.innerHTML = uncompleteList;
+                });
+            }
+            await start();
+            Rendering.renderButton();
     },
     renderButton(){
-        const buttons = document.querySelectorAll('#buttons');
+        const buttons = document.querySelectorAll('.buttons');
         buttons.forEach((button)=>{
-           button.addEventListener("click", function(){
+           button.addEventListener("click", async function(){
                 let btn = this.dataset.idbook;
                 console.log(btn);
-                Books.updateIsComplete(btn);
+                await Books.updateIsComplete(btn);
                 Rendering.renderList();
            });
         });

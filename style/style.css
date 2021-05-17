@@ -4,17 +4,133 @@ body{
     margin: unset;
     padding: unset;
 }
+.deleteButton{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
 .navbar{
+    width: 100%;
     margin-bottom: 10px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     background-color: rgb(135, 177, 231);
 }
 .navbar>h4{
     color: rgb(255, 255, 255);
     margin: 10px;
+}
+
+.iconDelete{
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+}
+.iconDelete>img{
+    width: 15px;
+    height: 15px;
+}
+.iconDelete:hover{
+    background-color: rgb(209, 4, 4);
+}
+.iconAdd{
+    border: transparent;
+    z-index: -1;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    background-color: rgb(135, 177, 231);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.iconAdd:hover{
+    background-color: rgb(122, 160, 209);
+}
+.iconClose:hover{
+    background-color: rgb(218, 0, 0);
+}
+.iconAdd>img{
+    width: 50px;
+    height: 50px;
+}
+.close{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+.iconClose{
+    border: transparent;
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    width: 30px;
+    height: 30px;
+}
+.iconClose>img{
+    width: 20px;
+    height: 20px;
+}
+.form{
+    top: 25%;
+    z-index:100;
+    overflow: 100;
+    background-color: white;
+    position: absolute;
+    right: 40%;
+    left: 40%;
+    border-radius: 10px;
+    padding: 15px;
+    border: 3px solid rgba(180, 180, 180, 0.63);
+    width: 340px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form>input{
+    margin-bottom: 10px;
+}
+.form>button{
+    margin-top: 5px;
+    animation: fadein 0.5s;
+    border-radius: 30px;
+    border: 0px;
+    color: white;
+    font-size: larger;
+    background-color: rgb(135, 177, 231);
+    width: 150px;
+    height: 30px;
+}
+.form>button:hover{
+    background-color: rgb(122, 160, 209);
+}
+.back{
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.432);
+    animation: fadein 0.5s;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 .result{
     display: flex;
@@ -65,6 +181,11 @@ body{
     justify-content: space-between;
     box-shadow: 3px 5px #00000036;
 
+}
+.icon{
+    width: 50px;
+    height: 50px;
+    color: red;
 }
 .dataBook{
     width: 100%;

@@ -1,0 +1,284 @@
+body{
+    width: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: unset;
+    padding: unset;
+}
+
+.searchBarParent{
+    margin-top: 30px;
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.searchBar{
+    position: sticky;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    border:2px solid;
+    border-color: rgb(116, 116, 116);
+    border-radius: 40px;
+}
+.searchBar>input{
+    margin-left: 30px;
+    border-color: transparent;
+    width: 90%;
+    height: 45px;
+    transition-duration: 0.4s;
+    font-weight: bold;
+}
+.searchBar>button{
+    padding: 0px;
+    border: transparent;
+    background-color: rgb(135, 177, 231);
+    width: 10%;
+    height: 45px;
+    transition-duration: 0.4s;
+}
+.searchBar>button>img{
+    margin: unset;
+    width: 25px;
+}
+.search:focus{
+    outline: unset;
+}
+.search:focus::placeholder{
+    outline: unset;
+    transition-duration: 0.4s;
+    color: transparent;
+}
+.search::placeholder{
+    font-weight: bold;
+}
+.button:focus{
+    outline: unset;
+}
+.searchBar>button:hover{
+    background-color: rgba(116, 116, 116, 0.336);
+}
+
+.deleteButton{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.navbar{
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(135, 177, 231);
+}
+.navbar>h4{
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    margin: 10px;
+}
+
+.iconDelete{
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+}
+.iconDelete>img{
+    width: 15px;
+    height: 15px;
+}
+.iconDelete:hover{
+    background-color: rgb(209, 4, 4);
+}
+.iconAdd{
+    border: transparent;
+    z-index: 100;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    background-color: rgb(135, 177, 231);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.iconAdd:hover{
+    background-color: rgb(122, 160, 209);
+}
+.iconClose:hover{
+    background-color: rgb(218, 0, 0);
+}
+.iconAdd>img{
+    width: 50px;
+    height: 50px;
+}
+.close{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+.iconClose{
+    border: transparent;
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    width: 30px;
+    height: 30px;
+}
+.iconClose>img{
+    width: 20px;
+    height: 20px;
+}
+.formPopup{
+    top: 25%;
+    z-index:100;
+    overflow: 100;
+    background-color: white;
+    position: absolute;
+    right: 40%;
+    left: 40%;
+    border-radius: 10px;
+    padding: 15px;
+    border: 3px solid rgba(180, 180, 180, 0.63);
+    width: 340px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.formPopup>input{
+    margin-bottom: 10px;
+}
+.formPopup>button{
+    margin-top: 5px;
+    animation: fadein 0.5s;
+    border-radius: 30px;
+    border: 0px;
+    color: white;
+    font-size: larger;
+    background-color: rgb(135, 177, 231);
+    width: 150px;
+    height: 30px;
+}
+.formPopup>button:hover{
+    background-color: rgb(122, 160, 209);
+}
+.back{
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.432);
+    animation: fadein 0.5s;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+.result{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+.result>h2{
+    color: darkgrey;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 70%;
+}
+.result>hr{
+    width: 70%;
+    border: 1px solid gainsboro;
+    margin-bottom: 50px;
+}
+.list{
+    width: 100%;
+    padding: 10px;
+    display:flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+}
+.list-child{
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+.listBook{
+    /* margin-top: 10px; */
+    margin: 10px;
+    width: 250px;
+    height: 300px;
+    padding: 10px;
+    border: solid 1px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 3px 5px #00000036;
+
+}
+.icon{
+    width: 50px;
+    height: 50px;
+    color: red;
+}
+.dataBook{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+}
+.dataBook>h2{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 25px;
+}
+.dataBook>h4{
+    font-style: unset;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    font-size: 20px;
+}
+.dataBook>p{
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.btn{
+    color: white;
+    background-color: rgb(95, 148, 247);
+    border: transparent;
+    border-radius: 50px;
+    width: 120px;
+    height: 25px;
+}
+.btn:hover{
+    background-color: rgb(86, 135, 226);
+}

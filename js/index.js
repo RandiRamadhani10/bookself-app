@@ -1,12 +1,25 @@
 import { Books } from "./models/models.js";
 import { Rendering } from "./rendering.js";
-import {books} from "./data/books.js";
-const button = document.querySelector("#notReaded");
+
 const form = document.querySelector("#form");
+const buttonAdd = document.querySelector(".iconAdd");
+const back = document.querySelector(".back");
+const formPopup = document.querySelector(".form");
+const buttonClose = document.querySelector(".iconClose");
+
+buttonClose.addEventListener("click",(event)=>{
+    event.preventDefault();
+    hidden();
+
+})
+buttonAdd.addEventListener("click",(event)=>{
+    event.preventDefault();
+    show();
+
+});
 
 
-
-    form.addEventListener("submit", async (event)=>{
+form.addEventListener("submit", async (event)=>{
         event.preventDefault();
             const title = document.querySelector("#title");
             const year = document.querySelector("#year");
@@ -20,9 +33,20 @@ const form = document.querySelector("#form");
                 year: year.value,
                 isComplete: isComplete.checked,
             });
-            await Rendering.renderList();
-            Rendering.renderButton();
-            
-    }); 
+            Rendering.renderList();
+            hidden();
+            // Rendering.renderButton();   
+}); 
+
+function hidden(){
+    back.style.display = "none";
+    formPopup.style.display = "none";
+
+}
+function show(){
+    back.style.display = "flex";
+    formPopup.style.display = "flex";
+
+}
 
 

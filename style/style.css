@@ -4,9 +4,35 @@ body{
     margin: unset;
     padding: unset;
 }
+.navbar{
+    position:fixed;
+    top:0px;
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(135, 177, 231);
+}
+.navbar>h4{
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    margin: 10px;
+}
 
+.iconDelete{
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+}
 .searchBarParent{
-    margin-top: 30px;
+    margin-top: 70px;
     margin-bottom: 80px;
     display: flex;
     flex-direction: row;
@@ -14,7 +40,6 @@ body{
     align-items: center;
 }
 .searchBar{
-    position: sticky;
     overflow: hidden;
     display: flex;
     flex-direction: row;
@@ -68,31 +93,6 @@ body{
     display: flex;
     justify-content: flex-end;
 }
-.navbar{
-    width: 100%;
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: rgb(135, 177, 231);
-}
-.navbar>h4{
-    font-size: 30px;
-    color: rgb(255, 255, 255);
-    margin: 10px;
-}
-
-.iconDelete{
-    border-radius: 50%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    background-color: red;
-}
 .iconDelete>img{
     width: 15px;
     height: 15px;
@@ -103,7 +103,7 @@ body{
 .iconAdd{
     border: transparent;
     z-index: 100;
-    position: absolute;
+    position: fixed;
     right: 30px;
     bottom: 30px;
     border-radius: 50%;
@@ -151,7 +151,7 @@ body{
     z-index:100;
     overflow: 100;
     background-color: white;
-    position: absolute;
+    position: fixed;
     right: 40%;
     left: 40%;
     border-radius: 10px;
@@ -183,8 +183,10 @@ body{
 .back{
     position: fixed;
     display: none;
-    width: 100%;
-    height: 100%;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
     background-color: rgba(0, 0, 0, 0.432);
     animation: fadein 0.5s;
 }

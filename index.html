@@ -6,11 +6,11 @@
     <link rel="stylesheet" href="./style/style.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bookself-app</title>
 </head>
 
 <body>
-    <form action="" id="form" class="form">
+    <form action="" id="form" class="formPopup">
         <div class="close">
             <a class="iconClose">
                 <img src="asset/close.svg" alt="">
@@ -30,13 +30,22 @@
     </form>
     <span class="back">
     </span>
+
     <div class="navbar">
         <img src="" alt="">
         <h4>Bookself-app</h4>
     </div>
-    <button class="iconAdd">
+    
+    <div class="searchBarParent">
+        <form class="searchBar">
+          <input type="search" name="search" class="search" id="titleSearch" placeholder="Search">
+          <button type="submit" class="button" id="button"><img src="asset/search.svg" alt=""></button>
+        </form>
+    </div>
+
+    <a class="iconAdd">
         <img src="asset/add.svg" alt="">
-    </button>
+    </a>
     <a data-idbook="${data.id}><img class=" icon" src="asset/close.svg" alt=""></a>
     <div class="result">
         <h2>Sudah Dibaca</h2>

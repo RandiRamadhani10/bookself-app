@@ -4,6 +4,65 @@ body{
     margin: unset;
     padding: unset;
 }
+
+.searchBarParent{
+    margin-top: 30px;
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.searchBar{
+    position: sticky;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    border:2px solid;
+    border-color: rgb(116, 116, 116);
+    border-radius: 40px;
+}
+.searchBar>input{
+    margin-left: 30px;
+    border-color: transparent;
+    width: 90%;
+    height: 45px;
+    transition-duration: 0.4s;
+    font-weight: bold;
+}
+.searchBar>button{
+    padding: 0px;
+    border: transparent;
+    background-color: rgb(135, 177, 231);
+    width: 10%;
+    height: 45px;
+    transition-duration: 0.4s;
+}
+.searchBar>button>img{
+    margin: unset;
+    width: 25px;
+}
+.search:focus{
+    outline: unset;
+}
+.search:focus::placeholder{
+    outline: unset;
+    transition-duration: 0.4s;
+    color: transparent;
+}
+.search::placeholder{
+    font-weight: bold;
+}
+.button:focus{
+    outline: unset;
+}
+.searchBar>button:hover{
+    background-color: rgba(116, 116, 116, 0.336);
+}
+
 .deleteButton{
     width: 100%;
     display: flex;
@@ -19,6 +78,7 @@ body{
     background-color: rgb(135, 177, 231);
 }
 .navbar>h4{
+    font-size: 30px;
     color: rgb(255, 255, 255);
     margin: 10px;
 }
@@ -42,7 +102,7 @@ body{
 }
 .iconAdd{
     border: transparent;
-    z-index: -1;
+    z-index: 100;
     position: absolute;
     right: 30px;
     bottom: 30px;
@@ -86,7 +146,7 @@ body{
     width: 20px;
     height: 20px;
 }
-.form{
+.formPopup{
     top: 25%;
     z-index:100;
     overflow: 100;
@@ -103,10 +163,10 @@ body{
     justify-content: center;
     align-items: center;
 }
-.form>input{
+.formPopup>input{
     margin-bottom: 10px;
 }
-.form>button{
+.formPopup>button{
     margin-top: 5px;
     animation: fadein 0.5s;
     border-radius: 30px;
@@ -117,11 +177,11 @@ body{
     width: 150px;
     height: 30px;
 }
-.form>button:hover{
+.formPopup>button:hover{
     background-color: rgb(122, 160, 209);
 }
 .back{
-    position: absolute;
+    position: fixed;
     display: none;
     width: 100%;
     height: 100%;
@@ -171,8 +231,8 @@ body{
 .listBook{
     /* margin-top: 10px; */
     margin: 10px;
-    width: 150px;
-    height: 200px;
+    width: 250px;
+    height: 300px;
     padding: 10px;
     border: solid 1px black;
     display: flex;
